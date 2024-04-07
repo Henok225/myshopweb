@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>henokstore shopping</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/script.js"></script>
+</head>
+<body >
+    <header>
+<img src="images/logo.png" alt="henokstore" class="logo"><span style="text-decoration:overline;font-weight: 800;font-size: 30px; margin-top: 50px; margin-left: 10px; color: rgba(92, 3, 3, 0.921); position: relative; bottom: 50px; text-shadow: -10px 15px 2px rgba(0, 0, 0, 0.138);">henokstore</span>
+<a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLScr_LBuP0xShKIWCHfGBTWK5L0eqYqMu6AY2Hz3QJxUAIk-Iw/viewform?usp=sf_link" style="text-decoration: none; float: right; position: absolute; right: 50px;"><button style="padding: 5px; color: white;background-color: rgb(29, 102, 109); font-weight: 600; font-size: 12px; border: none; box-shadow: 0 5px 5px rgba(0, 0, 0, 0.505); cursor: pointer;">Sell product</button></a>
+
+<div class="search-bar">
+    <input type="text" name="search-pro" id="search-pro" placeholder="Search">
+    <button class="search-btn">Search</button>
+</div>
+<div class="cart-btn"></div>
+
+    </header>
+    <nav>
+<select>
+    <option value="All categories" class="all-categories">All categories</option>
+    <option value="Televisions" class="category1">Televisions</option>
+    <option value="Headphones" class="category2">Headphones</option>
+    <option value="computers" class="category3">computers</option>
+    <option value="Appliances" class="category4">Appliances</option>
+    <option value="mobiles" class="category5">mobiles</option>
+    <option value="iPad & Tablets" class="category6">iPad & Tablets</option>
+    <option value="Cameras" class="category7">Cameras</option>
+    <option value="watches" class="category8">watches</option>
+</select>
+<div class="menu">
+    <!-- <img src="images/menu-icon.png" alt="" class="menu-icon">-->
+    <span class="menu-icon" onclick="menuDropDown();">_ <br>_ <br>_</span>
+    <ul class="nav-ul" id="main-navlist"> 
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="service.html">Service</a></li>
+        <li><a href="about-us.html">About us</a></li>
+        <li><a href="contact us.html">Contact us</a></li>
+    </ul>
+</div>
+    </nav>
+
+    <!--//////////// Order submission form /////////// -->
+
+    <div class="order-form-sub-page">
+        <p class="quit-order-form" style="font-size: 3em; color: white; float: left; cursor: pointer; margin: 10px;" onclick="document.querySelector('.order-form-sub-page').style.display = 'none';">x</p>
+    <div class="order-form-sub">
+        <p class="new-gtitle"><span style="color: blue;">O</span>rder <span style="color: blue;">F</span>orm</p>
+        
+        <form name="contact" method="POST" data-netlify="true"  onsubmit="alert('Your order has submitted thank you!');">
+            <label for="id-name" style="display: none;">Product ID :</label>
+            <input type="text" name="id-name" id="id-name" style="display: none;" >
+           
+            <label for="total-cost" style="display: none;">Total-Cost :</label>
+              <input type="text" name="total-cost" id="total-cost" style="display: none;" required>
+          
+              <label for="clint-name">Full Name : </label><br>
+            <input type="text" name = "clint-name" id="clint-name" placeholder="eg. Jhony Joy" required><br><br>
+             
+            <label for="phone-num">Phone number : </label><br>
+              <input type="tel" name="phone-num" id="phone-num" placeholder="eg. 251 934 46 26 08" required><br><br>
+           
+              <label for="clint-address">Address : </label><br>
+            <input type="text" name="clint-address" id="clint-address" placeholder="eg. Stadium, Addis Ababa, Ethiopia" required><br><br>
+             
+            <label for="pro-quan">Quantity : </label><br>
+              <input type="number" name="pro-quan" id="pro-quan" value="1" onclick="quntityIn();" onkeyup="quntityIn();" min="1" required><br><br>
+            
+            <p>Cost per piece : <span class="cos-for-1piece" style="color: red;"></span> ETB</p>
+            <p class="tt-cost">Total Cost: <span class="total-cost" style="color: red;"></span> ETB</p>
+            <input type="submit" value="Order Now" style="color: white; background-color: red;border: none; padding: 5px; font-weight: 600; cursor: pointer; " >
+
+        </form>
+
+    </div>
+</div>
+
+    <!-- ////////////////////////////////////////// -->
+
+    <div class="homepage-preview">
+<div class="prev1">
+<div class="prev1-description">
+    <p class="desc-small">Get flat <span style="font-size: 30px;">10%</span>Cashback </p>
+    
+    <p class="dec-large">THE <span style="color: rgb(246, 38, 38);">BIG</span> SALE</p>
+    
+    <button class="shop-now"><a href="shop.html" style="text-decoration: none; color: white;">Shop Now</a></button>
+</div>
+<p class="prev-next-slide" style="color: white;"><span class="prevs-btn" onclick="slide3(); document.querySelector('.psi3').style.color = 'white'; document.querySelector('.psi2').style.color = 'rgb(167, 145, 145)'; document.querySelector('.psi1').style.color = 'rgb(167, 145, 145)';"><img src="images/prev-btn.png" alt=""></span> <span class="next-btn" onclick="slide2(); document.querySelector('.psi2').style.color = 'white'; document.querySelector('.psi1').style.color = 'rgb(167, 145, 145)'; document.querySelector('.psi3').style.color = 'rgb(167, 145, 145)';"><img src="images/next-btn.png" alt=""></span></p> 
+</div>
+<div class="prev2">
+    <div class="prev2-description">
+        <p class="desc-small">Get now <span style="font-size: 30px;">40%</span> Discount </p>
+        
+        <p class="dec-large"> TODAY<span style="color: green;"> DISCOUNT</span></p>
+        
+        <button class="shop-now"><a href="shop.html" style="text-decoration: none; color: white;">Shop Now</a></button>
+    </div>
+    <p class="prev-next-slide" style="color: white;"><span class="prevs-btn" onclick="slide1(); document.querySelector('.psi1').style.color = 'white'; document.querySelector('.psi2').style.color = 'rgb(167, 145, 145)'; document.querySelector('.psi3').style.color = 'rgb(167, 145, 145)';"><img src="images/prev-btn.png" alt=""></span> <span class="next-btn" onclick="slide3(); document.querySelector('.psi3').style.color = 'white'; document.querySelector('.psi2').style.color = 'rgb(167, 145, 145)'; document.querySelector('.psi1').style.color = 'rgb(167, 145, 145)';"><img src="images/next-btn.png" alt=""></span></p> 
+</div>
+<div class="prev3">
+    <div class="prev3-description">
+        <p class="desc-small">advanced <span style="font-size: large;">Wireless</span> earbuds</p>
+        
+        <p class="dec-large">BEST <span style="color: green;">HEADPHONE</span></p>
+        
+        <button class="shop-now"><a href="shop.html" style="text-decoration: none; color: white;">Shop Now</a></button>
+    </div>
+    <p class="prev-next-slide" style="color: white;"><span class="prevs-btn" onclick="slide2(); document.querySelector('.psi2').style.color = 'white'; document.querySelector('.psi1').style.color = 'rgb(167, 145, 145)'; document.querySelector('.psi3').style.color = 'rgb(167, 145, 145)';"><img src="images/prev-btn.png" alt=""></span> <span class="next-btn" onclick="slide1(); document.querySelector('.psi1').style.color = 'white'; document.querySelector('.psi2').style.color = 'rgb(167, 145, 145)'; document.querySelector('.psi3').style.color = 'rgb(167, 145, 145)';"><img src="images/next-btn.png" alt=""></span></p> 
+</div>
+
+   </div>
+   <div class="prev-slid-indcator"><span class="psi1" style="color: white;" onclick="slide1(); this.style.color = 'white'; document.querySelector('.psi2').style.color = 'rgb(167, 145, 145)'; document.querySelector('.psi3').style.color = 'rgb(167, 145, 145)';">.</span> <span class="psi2" onclick="slide2(); this.style.color = 'white'; document.querySelector('.psi1').style.color = 'rgb(167, 145, 145)'; document.querySelector('.psi3').style.color = 'rgb(167, 145, 145)';">.</span> <span class="psi3" onclick="slide3(); this.style.color = 'white'; document.querySelector('.psi1').style.color = 'rgb(167, 145, 145)'; document.querySelector('.psi2').style.color = 'rgb(167, 145, 145)'; ">.</span></div>
+ 
+   <main>
+   <!-- ///////////////New products announcer/////////////// -->
+ 
+   <div class="new-products">
+        <p class="new-gtitle"><span style="color: blue;">N</span>ew <span style="color: blue;">P</span>roducts</p>
+        
+        <!-- New products preview -->
+
+        <div class="product1">
+            <p class="nproduct1-title">New Brand Mobiles</p>
+            <div class="product-list">
+            <div class="nproduct1s products">
+                <figure onmouseleave=" document.querySelector('.mb1-det-info').style.height='30px';  document.querySelector('.more-ab-prdct1').innerText = 'more';">
+                    <img src="images/product/mobile/mb1.jpg" alt="product name" >
+                    <hr>
+                    <figcaption>
+                        <div class="mb-det-info mb1-det-info">
+                        product name  and some details <br>
+                        <span class="mb-pr-char">brand:</span><br>
+                        <span class="pr-char">Ram:</span><br>
+                        <span class="mb-pr-char">Battery:</span><br>
+                        <span class="mb-pr-char">Storage:</span><br>
+                        <span class="mb-pr-char">Rear Camera:</span><br>
+                        <span class="mb-pr-char">Front Camera:</span><br> <br>
+                       </div> <span class="more-ab-prdct1" style="color: rgb(128, 119, 83); float: right; cursor: pointer; transition: 1s;" onclick="if(document.querySelector('.mb1-det-info').style.height!='150px'){document.querySelector('.mb1-det-info').style.height='150px'; this.innerText = 'less';}else{document.querySelector('.mb1-det-info').style.height='30px'; this.innerText = 'more';}">more</span>
+                       <p class="cost-detail"> <span class="the-cost">200$ </span> <span class="the-prevs-cost">  230$</span></p> 
+                        <button class="purchase-product" onclick="orderNow('mb1', '200');"><i class="fa fa-shopping-cart" style="font-size:24px; color: white;" > </i> Buy Now</button>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="nproduct1s products">
+                <figure onmouseleave=" document.querySelector('.mb2-det-info').style.height='30px';  document.querySelector('.more-ab-prdct2').innerText = 'more';">
+                    <img src="images/product/mobile/mb1.jpg" alt="product name">
+                    <hr>
+                    <figcaption>
+                        <div class="mb-det-info mb2-det-info">
+                        product name  and some details <br>
+                        <span class="mb-pr-char">brand:</span><br>
+                        <span class="pr-char">Ram:</span><br>
+                        <span class="mb-pr-char">Battery:</span><br>
+                        <span class="mb-pr-char">Storage:</span><br>
+                        <span class="mb-pr-char">Rear Camera:</span><br>
+                        <span class="mb-pr-char">Front Camera:</span><br> <br>
+                       </div> <span class="more-ab-prdct2" style="color: rgb(128, 119, 83); float: right; cursor: pointer; transition: 1s;" onclick="if(document.querySelector('.mb2-det-info').style.height!='150px'){document.querySelector('.mb2-det-info').style.height='150px'; this.innerText = 'less';}else{document.querySelector('.mb2-det-info').style.height='30px'; this.innerText = 'more';}">more</span>
+                       <p class="cost-detail"> <span class="the-cost">200$ </span> <span class="the-prevs-cost">  230$</span></p> 
+                        <button class="purchase-product" onclick="orderNow('mb2');"><i class="fa fa-shopping-cart" style="font-size:24px; color: white;" > </i> Buy Now</button>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="nproduct1s products">
+                <figure onmouseleave=" document.querySelector('.mb3-det-info').style.height='30px';  document.querySelector('.more-ab-prdct3').innerText = 'more';">
+                    <img src="images/product/mobile/mb1.jpg" alt="product name">
+                    <hr>
+                    <figcaption>
+                        <div class="mb-det-info mb3-det-info">
+                        product name  and some details <br>
+                        <span class="mb-pr-char">brand:</span><br>
+                        <span class="pr-char">Ram:</span><br>
+                        <span class="mb-pr-char">Battery:</span><br>
+                        <span class="mb-pr-char">Storage:</span><br>
+                        <span class="mb-pr-char">Rear Camera:</span><br>
+                        <span class="mb-pr-char">Front Camera:</span><br> <br>
+                       </div> <span class="more-ab-prdct3" style="color: rgb(128, 119, 83); float: right; cursor: pointer; transition: 1s;" onclick="if(document.querySelector('.mb3-det-info').style.height!='150px'){document.querySelector('.mb3-det-info').style.height='150px'; this.innerText = 'less';}else{document.querySelector('.mb3-det-info').style.height='30px'; this.innerText = 'more';}">more</span>
+                       <p class="cost-detail"> <span class="the-cost">200$ </span> <span class="the-prevs-cost">  230$</span></p> 
+                        <button class="purchase-product"  onclick="orderNow('mb3');"><i class="fa fa-shopping-cart" style="font-size:24px; color: white;"> </i> Buy Now</button>
+                    </figcaption>
+                </figure>
+            </div>
+
+            
+        </div>
+        </div><br><br>
+
+
+        <div class="product1">
+            <!-- <p class="nproduct1-title">New Brand Mobiles</p> -->
+            <div class="product-list">
+            <div class="nproduct1s products">
+                <figure onmouseleave=" document.querySelector('.mb4-det-info').style.height='30px';  document.querySelector('.more-ab-prdct4').innerText = 'more';">
+                    <img src="images/product/mobile/mb1.jpg" alt="product name">
+                    <hr>
+                    <figcaption>
+                        <div class="mb-det-info mb4-det-info">
+                        product name  and some details <br>
+                        <span class="mb-pr-char">brand:</span><br>
+                        <span class="pr-char">Ram:</span><br>
+                        <span class="mb-pr-char">Battery:</span><br>
+                        <span class="mb-pr-char">Storage:</span><br>
+                        <span class="mb-pr-char">Rear Camera:</span><br>
+                        <span class="mb-pr-char">Front Camera:</span><br> <br>
+                       </div> <span class="more-ab-prdct4" style="color: rgb(128, 119, 83); float: right; cursor: pointer; transition: 1s;" onclick="if(document.querySelector('.mb4-det-info').style.height!='150px'){document.querySelector('.mb4-det-info').style.height='150px'; this.innerText = 'less';}else{document.querySelector('.mb4-det-info').style.height='30px'; this.innerText = 'more';}">more</span>
+                       <p class="cost-detail"> <span class="the-cost">200$ </span> <span class="the-prevs-cost">  230$</span></p> 
+                        <button class="purchase-product"><i class="fa fa-shopping-cart" style="font-size:24px; color: white;"> </i> Buy Now</button>
+                    </figcaption>
+                </figure>
+            </div>
+    
+            <div class="nproduct1s products">
+                <figure onmouseleave=" document.querySelector('.mb5-det-info').style.height='30px';  document.querySelector('.more-ab-prdct5').innerText = 'more';">
+                    <img src = " images/product/mobile/mb1.jpg" alt="product name">
+                    <hr>
+                    <figcaption>
+                        <div class="mb-det-info mb5-det-info">
+                        product name  and some details <br>
+                        <span class="mb-pr-char">brand:</span><br>
+                        <span class="pr-char">Ram:</span><br>
+                        <span class="mb-pr-char">Battery:</span><br>
+                        <span class="mb-pr-char">Storage:</span><br>
+                        <span class="mb-pr-char">Rear Camera:</span><br>
+                        <span class="mb-pr-char">Front Camera:</span><br> <br>
+                       </div> <span class="more-ab-prdct5" style="color: rgb(128, 119, 83); float: right; cursor: pointer; transition: 1s;" onclick="if(document.querySelector('.mb5-det-info').style.height!='150px'){document.querySelector('.mb5-det-info').style.height='150px'; this.innerText = 'less';}else{document.querySelector('.mb5-det-info').style.height='30px'; this.innerText = 'more';}">more</span>
+                       <p class="cost-detail"> <span class="the-cost">200$ </span> <span class="the-prevs-cost">  230$</span></p> 
+                        <button class="purchase-product"><i class="fa fa-shopping-cart" style="font-size:24px; color: white;"> </i> Buy Now</button>
+                    </figcaption>
+                </figure>
+            </div>
+    
+            <div class="nproduct1s products">
+                <figure onmouseleave=" document.querySelector('.mb6-det-info').style.height='30px';  document.querySelector('.more-ab-prdct6').innerText = 'more';">
+                    <img src="images/product/mobile/mb1.jpg" alt="product name">
+                    <hr>
+                    <figcaption>
+                        <div class="mb-det-info mb6-det-info">
+                        product name  and some details <br>
+                        <span class="mb-pr-char">brand:</span><br>
+                        <span class="pr-char">Ram:</span><br>
+                        <span class="mb-pr-char">Battery:</span><br>
+                        <span class="mb-pr-char">Storage:</span><br>
+                        <span class="mb-pr-char">Rear Camera:</span><br>
+                        <span class="mb-pr-char">Front Camera:</span><br> <br>
+                       </div> <span class="more-ab-prdct6" style="color: rgb(128, 119, 83); float: right; cursor: pointer; transition: 1s;" onclick="if(document.querySelector('.mb6-det-info').style.height!='150px'){document.querySelector('.mb6-det-info').style.height='150px'; this.innerText = 'less';}else{document.querySelector('.mb6-det-info').style.height='30px'; this.innerText = 'more';}">more</span>
+                       <p class="cost-detail"> <span class="the-cost">200$ </span> <span class="the-prevs-cost">  230$</span></p> 
+                        <button class="purchase-product"><i class="fa fa-shopping-cart" style="font-size:24px; color: white;"> </i> Buy Now</button>
+                    </figcaption>
+                </figure>
+            </div>
+    
+    </div>
+            
+        </div>
+        </div><br><br>
+
+        <aside class="ads-aside">
+            <p>Shop now</p>
+            </aside>
+        </main>
+
+    <div class="before-footer">
+
+    </div>
+    <footer>
+<div class="ftr-catagories">
+    <h3 style="color: white;">Catagories</h3>
+    <a href="#">Mobiles</a>
+    <a href="#">Computer</a>
+    <a href="#">TV,Audio</a>
+    <a href="#">Headphones</a>
+    <a href="#">watches</a>
+    <a href="#">airpads</a>
+</div>
+<div class="ftr-Quick-Links">
+    <h3 style="color: white;">Quick Links</h3>
+    <a href="about-us.html">About Us</a>
+    <a href="contact us.html">Contact Us</a>
+    <a href="">Help</a>
+    <a href="faqs.html">Faqs</a>
+    <a href="shop.html">Shop</a>
+    <a href="service.html">Service</a>
+</div>
+<div class="ftr-Get in Touch">
+    <h3 style="color: white;">Get in Touch</h3>
+    <a><li class="fa fa-map-marker"></li> Addis Ababa, Ethiopia</a>
+    <a href="#" target="_blank"><li class="fa fa-envelope"></li> henokstore@gmail.com</a>
+    <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank"><li class="fa fa-envelope"></li> henokzena650@gmail.com</a>
+</div>
+<div class="ftr-Newsletter">
+    <h3 style="color: white;">Newsletter</h3>
+    <p style="color: rgba(246, 244, 240, 0.997); font-size: 1.1em;">Free Delivery on your <br> first order!</p>
+    <h3 style="color: white;">Follow Us on</h3>
+    <div class="social-medi-links">
+    <a href="" target="_blank"><li class="fa fa-facebook"></li></a>
+    <a href="" target="_blank"><li class="fa fa-twitter"></li></a>
+    <a href="" target="_blank"><li class="fa fa-telegram"></li></a>
+</div>
+</div>
+    </footer>
+    <div class="after-footer" style="background-color: #f8f9fA; color: rgb(112, 88, 88); text-align: center; padding: 2px;">
+<p>&copy; 2024 henokstore. All rights reserved</p>
+    </div>
+    
+</body>
+</html>
